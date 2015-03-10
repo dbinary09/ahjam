@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Socket.IO chat</title>
+    
+  </head>
+  <body>
+    <div id="panel" style="visibility: hidden;">
+    <ul id="messages"></ul>
+    
+    <form action="">
+      <input id="m" autocomplete="off" /><button>Send</button>
+    </form>
+    </div>
+
+    <div id="login">
+    <li class="login page">
+      <div class="form">
+        <h3 class="title">What's your nickname?</h3>
+        <input class="usernameInput" type="text" maxlength="14" />
+      </div>
+    </li>
+    </div>
+
+<script>
+  var socket = io();
+  $('form').submit(function(){
+    socket.emit('chat message', finalusername + " : " + $('#m').val());
+    $('#m').val('');
+    return false;
+  });
+  socket.on('chat message', function(msg){
+    $('#messages').append($('<li>').text(msg));
+  });
+
+</script>
+
+  </body>
+</html>
