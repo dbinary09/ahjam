@@ -23,10 +23,8 @@ $(function() {
   var lastTypingTime;
   var $currentInput = $usernameInput.focus();
 
-  var socket = io();
-
+  // var socket = io();
   
-
   // Sets the client's username
   function setUsername () {
     //username = cleanInput($usernameInput.val().trim());
