@@ -10,7 +10,6 @@ app.listen(process.env.PORT || 5000);
 
 app.get('/', function(req, res){
   res.sendFile(__dirname + '/index.html');
-  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
 });
 
 io.on('connection', function(socket){
