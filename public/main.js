@@ -29,7 +29,8 @@ $(function() {
 
   // Sets the client's username
   function setUsername () {
-    username = cleanInput($usernameInput.val().trim());
+    // username = cleanInput($usernameInput.val().trim());
+    username = $usernameInput.val().trim();
 
     // If the username is valid
     if (username) {
@@ -58,7 +59,6 @@ document.getElementById("panel").style.visibility = "visible";
        document.getElementById("panel").style.visibility = "visible";
        setUsername();
     }
-alert("I am an alert box!");
   });
 
 
