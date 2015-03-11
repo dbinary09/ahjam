@@ -24,15 +24,16 @@ $(function() {
   var $currentInput = $usernameInput.focus();
 
   var socket = io();
+
   
+
   // Sets the client's username
   function setUsername () {
-    // username = cleanInput($usernameInput.val().trim());
-    //username = $usernameInput.val().trim();
+    //username = cleanInput($usernameInput.val().trim());
 
     // If the username is valid
     //if (username) {
-document.getElementById("panel").style.visibility = "visible";
+//document.getElementById("panel").style.visibility = "visible";
 
       //$loginPage.fadeOut();
 //      $chatPage.show();
