@@ -3,13 +3,18 @@
 	<head>
 		<title>Still testing...</title>
 		<link rel="stylesheet" href="/style.css">
-	</head>
-	<body>
-		hello testing
-		
 		<script src="/socket.io/socket.io.js"></script>
 		<script src="https://cdn.socket.io/socket.io-1.2.0.js"></script>
 		<script src="http://code.jquery.com/jquery-1.11.1.js"></script>
 		<script src="/main.js"></script>
+		<script>
+			var socket = io.connect('http://localhost:5000');
+			socket.on('news', function (data) {
+			console.log(data);
+			});
+		</script>
+	</head>
+	<body>
+		hello testing
 	</body>
 </html>
