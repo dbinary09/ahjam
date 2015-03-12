@@ -5,6 +5,12 @@ var server = require('http').createServer(app);
 var io = require('socket.io').listen(server);
 var port = process.env.PORT || 3000;
 
+// assuming io is the Socket.IO server object
+io.configure(function () { 
+  io.set("transports", ["xhr-polling"]); 
+  io.set("polling duration", 10); 
+});
+
 // server or app
 server.listen(port, function () {
   console.log('Server listening at port %d', port);
